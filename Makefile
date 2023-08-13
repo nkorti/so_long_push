@@ -1,6 +1,6 @@
 CC			=	cc
 NAME		=	so_long
-CFLAGS		=	-Wall -Wextra -Werror -fsanitize=address -g3
+CFLAGS		=	-Wall -Wextra -Werror
 
 SRCS		=	utils.c \
 				valide_name_map.c\

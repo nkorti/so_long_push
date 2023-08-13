@@ -1,11 +1,11 @@
 #include "so_long.h"
 static void	put_di(t_data *map, int x, int y)
 {
-	if (map->keycode == 0)
+	if (map->keycode == 0 ||map->keycode == 123 )
 		a(map, x, y);
-	else if (map->keycode == 2)
+	else if (map->keycode == 2 || map->keycode == 124)
 		d(map, x, y);
-	else if (map->keycode == 1)
+	else if (map->keycode == 1 || map->keycode == 125)
 		s(map, x, y);
 	else
 		w(map, x, y);
@@ -64,22 +64,22 @@ int	move_map(int keycode, t_data *map)
 {
 	if (keycode == 53)
 		exit(0);
-	if (keycode == 13)
+	if (keycode == 13 || keycode == 126 )
 	{
 		map->keycode = keycode;
 		move(map, map->player->pos_y - 1, map->player->pos_x);
 	}
-	if (keycode == 0)
+	if (keycode == 0 || keycode == 123)
 	{
 		map->keycode = keycode;
 		move(map, map->player->pos_y, map->player->pos_x - 1);
 	}
-	if (keycode == 1)
+	if (keycode == 1 || keycode == 125)
 	{
 		map->keycode = keycode;
 		move(map, map->player->pos_y + 1, map->player->pos_x);
 	}
-	if (keycode == 2)
+	if (keycode == 2 || keycode == 124)
 	{
 		map->keycode = keycode;
 		move(map, map->player->pos_y, map->player->pos_x + 1);
